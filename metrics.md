@@ -1,8 +1,9 @@
 # Strike Finance V2 — Live On-Chain & Platform Metrics
 
-Snapshot captured on **October 22, 2026** comparing live data from:
-1. **Strike Finance Production REST API** (`api.strikefinance.org`)
-2. **DeFiLlama Public API & On-Chain Indexer** (`api.llama.fi`)
+Comprehensive metrics snapshot captured on **October 22, 2026** directly cross-verified across three independent sources:
+1. **Cardano Mainnet RPC Node** (Demeter.run Blockfrost dedicated gateway)
+2. **DeFiLlama Public API & On-Chain Indexer** (`api.llama.fi`, using [strike-finance/DefiLlama-Adapters](https://github.com/strike-finance/DefiLlama-Adapters/blob/main/projects/strike-finance/index.js))
+3. **Strike Finance Production REST API** (`api.strikefinance.org`)
 
 ---
 
@@ -67,7 +68,72 @@ Comparing Strike's direct API against third-party aggregators reveals crucial di
 
 ---
 
-## 3. User Engagement & Growth
+## 3. Direct Cardano Mainnet Node Verification (Demeter RPC)
+*Node Gateway:* `https://cardano-mainnet.blockfrost-m1.demeter.run`  
+*Contract Reference:* [DefiLlama-Adapters / strike-finance / index.js](https://github.com/strike-finance/DefiLlama-Adapters/blob/main/projects/strike-finance/index.js)
+
+By querying the Cardano Mainnet directly via our authenticated Demeter Blockfrost node, we verify the raw UTXOs and tokens stored in Strike's smart contract addresses:
+
+### Verified Smart Contract Addresses on Cardano Mainnet
+
+| Contract Name | On-Chain Address / Policy ID | Verified Role | Live On-Chain Assets Found |
+| :--- | :--- | :--- | :--- |
+| **`strikeStaking`** | `addr1z9yh4zcqs4gh78ysvh8nqp40fsnxg49nn3h6x25az9k8tms6409492020k6xml8uvwn34wrexagjh5fsk5xk96jyxk2qf3a7kj` | Community Staking Pool | **715,952.597361 STRIKE** + **31,583.67 ADA** |
+| **`strikePerpsScriptV2`**| `addr1z9nsxjyw7xgfw5jtfxcw7fxucte0277ununa4evyxcw3evg6409492020k6xml8uvwn34wrexagjh5fsk5xk96jyxk2q4366ry` | Strike V2 Execution Locker | **`PROTOCOL_POOL_NFT`** + **436.46 ADA** |
+| **`strikeSnekPerpsScript`**| `addr1zy48lqwffvzkahcyrhj8982p3f7c002g098ly4zxzxefnlg6409492020k6xml8uvwn34wrexagjh5fsk5xk96jyxk2qst04fy` | SNEK Perpetuals Locker | **`PROTOCOL_POOL_NFT`** + **17,294,764 SNEK** |
+| **`strikeBatching`** | `addr1q9mqsgrgdaq9aahjfcrc6f45sgmcut4gu3c774kqzawkjkhujht5h40l2yrm8e7r2vwr2g3tv64pzjgnxwsztwg0yu5s00jz00` | Transaction Batcher | 10,053 txs processed, 7.03M ADA lifetime flow |
+| **`strikePerpsScriptV1`**| `addr1wy2gch9ua0700a3dg423wxcwx4p886m4ny5u3aqs66sluqcly9uud` | Legacy V1 Pool | 7,655 txs processed, 3.3B ADA lifetime volume |
+| **`strikeTokenAddress`**| `f13ac4d66b3ee19a6aa0f2a22298737bd907cc95121662fc971b5275535452494b45` | Native STRIKE Asset ID | Max Supply: **25,000,000 STRIKE** (6 decimals) |
+
+### Three-Way Triangulation Result
+
+```text
+======================================================================
+CROSS-VERIFICATION & PARITY REPORT
+======================================================================
+Metric                         | Cardano Node     | DeFiLlama        | Parity Delta  
+----------------------------------------------------------------------------------
+Staked STRIKE Tokens           | 715,952.597361   | 715,952.597360   | 0.00000000%
+Staked ADA Balance             | 31,583.67 ADA    | Not tracked      | N/A
+V2 Protocol Pool NFT           | Present (Active) | Indexed          | Match
+----------------------------------------------------------------------------------
+Exchange Collateral TVL:
+  Strike Native Treasury API:  $1,860,295.23 (User Collateral Only)
+  DeFiLlama Protocol Index:    $2,299,437.95 (Difference: +$439,142.72 due to STRIKE tokens)
+======================================================================
+```
+
+> **Automated Script:** You can re-run this exact three-way reconciliation anytime locally:
+> ```bash
+> python3 scripts/verify_onchain_metrics.py
+> ```
+
+---
+
+## 4. Strike Finance AI Agent Skills Integration
+*Reference Repository:* [github.com/strike-finance/strike-finance-skills](https://github.com/strike-finance/strike-finance-skills/)
+
+The workspace is equipped with **13 official Strike Finance AI Agent Skills** installed locally in `.gemini/skills/` via `npx strike-finance-skills install --agents gemini`:
+
+| Installed Skill | Description & Automated Use Case |
+| :--- | :--- |
+| **`strike-account`** | Read balances, portfolio equity, sub-accounts, server time, fee tiers, and market configs. |
+| **`strike-auth`** | Ed25519 request signing (`METHOD:PATH:TIMESTAMP:NONCE:BODY_HASH`), API wallet key generation, and builder connect. |
+| **`strike-calculations`** | Deterministic formulas matching backend execution: liquidation price, margin tiers, PnL, funding payments, and fee tiers. |
+| **`strike-deposit`** | Multi-chain deposit pipeline (quotes, transaction building, user signing, confirmations). |
+| **`strike-withdraw`** | Withdrawal quote estimation, validator co-signatures, margin limit checks, and queue positions. |
+| **`strike-trading`** | Limit, market, trigger (stop-loss/take-profit) orders, batch placement, and atomic replace. |
+| **`strike-market-data`** | Public REST market data: depth snapshots, trades, open interest, funding rates, tickers, and klines. |
+| **`strike-orderbook`** | L2 order book snapshots, top-20 WebSocket diffs, and L3 market-by-order book feeds. |
+| **`strike-trades`** | Real-time and historical trade streams. |
+| **`strike-price-feeds`** | Public WebSocket feeds for live prices, mark prices, and candle updates. |
+| **`strike-userstream`** | Authenticated WebSocket (`session.logon`) streaming fills, order updates, account margin changes, and position triggers. |
+| **`strike-history`** | Order, fill, funding, and transaction audit logs. |
+| **`strike-klines`** | Candlestick time-series analytics. |
+
+---
+
+## 5. User Engagement & Growth
 *Source Endpoint:* `https://api.strikefinance.org/stat/v1/dashboard/users`
 
 * **Tracked Platform History:** 218 days
@@ -85,7 +151,7 @@ Comparing Strike's direct API against third-party aggregators reveals crucial di
 
 ---
 
-## 4. Top Markets: Open Interest, Prices & Basis
+## 6. Top Markets: Open Interest, Prices & Basis
 *Source Endpoints:* `https://api.strikefinance.org/price/v2/openInterest` & `/v2/premiumIndex`
 
 Comparing **Mark Price** (Strike Node execution price) against **Index Price** (underlying oracle benchmark) highlights real-time basis discrepancies available for arbitrage or keeper spread compression.
@@ -109,7 +175,7 @@ Comparing **Mark Price** (Strike Node execution price) against **Index Price** (
 
 ---
 
-## 5. Public Vaults & Liquidity Performance
+## 7. Public Vaults & Liquidity Performance
 *Source Endpoint:* `https://api.strikefinance.org/v2/vaults`
 
 Public vaults allow users to allocate capital to automated market-making and programmatic strategies.
@@ -137,7 +203,7 @@ Public vaults allow users to allocate capital to automated market-making and pro
 
 ---
 
-## 6. Cross-Platform Copy Trading Discovery
+## 8. Cross-Platform Copy Trading Discovery
 *Source Endpoint:* `https://api.strikefinance.org/v2/copy/discover`
 
 * Integrates and ranks high-performing traders from both **Strike** and **Hyperliquid**.
@@ -146,7 +212,7 @@ Public vaults allow users to allocate capital to automated market-making and pro
 
 ---
 
-## 7. Alignment with DeFi Efficiency Research & Bounty Systems
+## 9. Alignment with DeFi Efficiency Research & Bounty Systems
 
 Connecting these on-chain metrics to the findings of *Schwertfeger & Vogt (2026)*:
 
@@ -157,9 +223,11 @@ Connecting these on-chain metrics to the findings of *Schwertfeger & Vogt (2026)
 
 ---
 
-## Reference Endpoints
-* **Base REST API:** `https://api.strikefinance.org`
-* **Market Data REST:** `https://api.strikefinance.org/price`
-* **Statistics REST:** `https://api.strikefinance.org/stat`
+## Reference Endpoints & Tooling
+* **Cardano Mainnet Node RPC:** `https://cardano-mainnet.blockfrost-m1.demeter.run`
+* **Cardano Preprod Node RPC:** `https://cardano-preprod.blockfrost-m1.demeter.run`
+* **Strike Base REST API:** `https://api.strikefinance.org`
+* **Strike Market Data REST:** `https://api.strikefinance.org/price`
+* **Strike Statistics REST:** `https://api.strikefinance.org/stat`
 * **DeFiLlama API:** `https://api.llama.fi/protocol/strike-finance-perpetuals`
-* **WebSocket Streams:** `wss://api.strikefinance.org/ws/price` and `/ws/user-api`
+* **Strike Agent Skills:** Local install at `.gemini/skills/` (CLI: `npx strike-finance-skills install`)
