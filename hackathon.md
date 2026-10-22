@@ -4,19 +4,11 @@ start: "2026-10-21 10:00 EST"
 duration: 48 hours
 format: coding competition
 prize_pool: "$3,000"
-judges: "to be announced"
 ---
 
 # Strike Hackathon
 
-Use this file as factual context about the hackathon and Strike developer tooling. Keep event requirements separate from platform capabilities.
-
-## Event
-
-- Start: Wednesday, October 21, 2026 at 10:00 AM EST.
-- Format: 48-hour coding competition.
-- Prize pool: $3,000.
-- Judges: to be announced.
+Use this file as factual context about the hackathon and Strike developer tooling. Keep project requirements separate from platform capabilities.
 
 ## Strike platform
 
