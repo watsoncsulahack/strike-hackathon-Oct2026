@@ -1,6 +1,8 @@
 # Branding and asset provenance
 
-This publication includes provenance notes only. Images, app icons, theme comparison, video, and binary checksum manifest are deferred. Paths below describe the prepared local package, not files in this commit.
+This document needs updating, the sampled UI color scheme came from the branding / artwork and not from the website drmz.app. The ChatGPT environment I was using could not sample the actual webUI css. This is a hand-off to the coding agent to re-sample the website and correct this assets.md file. Make note of appropriate licensing, and all rights reserved if not sure.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The app adapts [DRMZ](https://www.drmz.app/) branding for a proposed educational experience. No formal DRMZ design-system approval or partnership is implied.
 
