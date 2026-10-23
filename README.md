@@ -2,9 +2,23 @@
 
 A proposed DRMZ educational web app where beginners learn perpetuals through virtual trading, contextual Morpheus guidance, and XP for demonstrated understanding. The target is a responsive progressive web app for laptop and phone, with a guided first task that introduces tools gradually.
 
+## Documentation
+
+| Document | Purpose |
+| --- | --- |
+| [Product.md](Product.md) | Business concept, mission, problem, solution, and value proposition. |
+| [UI.md](UI.md) | Features, navigation, learner interactions, feedback, and recovery. |
+| [design.md](design.md) | Visual styling; actual DRMZ website CSS still needs to be sampled. |
+| [requirements.md](requirements.md) | User and system requirements with acceptance criteria. |
+| [ER.md](ER.md) | The existing conceptual entity relationship diagram and its editable source. |
+| [docs/backlog.md](docs/backlog.md) | Prioritized implementation work and status. |
+| [docs/metrics.md](docs/metrics.md) | Dated Strike ecosystem research and verification context. |
+
+The product and interface documents describe the intended experience. Requirements define acceptance, and the backlog tracks delivery. Follow [AGENTS.md](AGENTS.md) when implementing changes.
+
 ## Trade Architecture and Workflow
 
-The user interface gathers the student's decision. The read-only adapter fetches provider data. The deterministic paper engine calculates and validates virtual execution. The local account ledger records the result. Morpheus explains the mechanism; it does not replace the calculation engine. The following diagram is the intended live-observation workflow, not the skeleton's network behavior. In `skeleton-ui/`, an explicitly fictional scenario supplies the quote locally; the rest of the first-trade loop uses the shared deterministic engine.
+The user interface gathers the student's decision. The read-only adapter fetches provider data. The deterministic paper engine calculates and validates virtual execution. The local account ledger records the result. Morpheus explains the mechanism; it does not replace the calculation engine. The following diagram is the intended live-observation workflow. The guided scenario described in [UI.md](UI.md) supplies explicitly fictional inputs instead of provider observations. The earlier skeleton and reference source are not present in this repository.
 
 ```mermaid
 flowchart TD
@@ -32,6 +46,6 @@ flowchart TD
     S --> T[Complete lesson objective and award XP once]
 ```
 
-The initial engine is browser-local, with no server-side user account or funds custody. An agent can read this brief and call public data routes, but automated paper order APIs, account sync, and autonomous trading agents are separate future capabilities. Installation of a skill file alone does not create them.
+The initial engine is intended to be browser-local, with no server-side user account or funds custody. An agent can read this brief and call public data routes, but automated paper order APIs, account sync, and autonomous trading agents are separate future capabilities. Installation of a skill file alone does not create them.
 
 See [LICENSE](LICENSE) for terms.
