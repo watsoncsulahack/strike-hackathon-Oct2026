@@ -7,18 +7,17 @@ A proposed DRMZ educational web app where beginners learn perpetuals through vir
 | Document | Purpose |
 | --- | --- |
 | [Product.md](Product.md) | Business concept, mission, problem, solution, and value proposition. |
-| [UI.md](UI.md) | Features, navigation, learner interactions, feedback, and recovery. |
-| [design.md](design.md) | Visual styling; actual DRMZ website CSS still needs to be sampled. |
+| [design.md](design.md) | Visual design, feature presentation, and learner interactions; actual DRMZ website CSS still needs to be sampled. |
 | [requirements.md](requirements.md) | User and system requirements with acceptance criteria. |
 | [ER.md](ER.md) | The existing conceptual entity relationship diagram and its editable source. |
 | [docs/backlog.md](docs/backlog.md) | Prioritized implementation work and status. |
 | [docs/metrics.md](docs/metrics.md) | Dated Strike ecosystem research and verification context. |
 
-The product and interface documents describe the intended experience. Requirements define acceptance, and the backlog tracks delivery. Follow [AGENTS.md](AGENTS.md) when implementing changes.
+The product and design documents describe the intended experience. Requirements define acceptance, and the backlog tracks delivery. Follow [AGENTS.md](AGENTS.md) when implementing changes.
 
 ## Trade Architecture and Workflow
 
-The user interface gathers the student's decision. The read-only adapter fetches provider data. The deterministic paper engine calculates and validates virtual execution. The local account ledger records the result. Morpheus explains the mechanism; it does not replace the calculation engine. The following diagram is the intended live-observation workflow. The guided scenario described in [UI.md](UI.md) supplies explicitly fictional inputs instead of provider observations. The earlier skeleton and reference source are not present in this repository.
+The user interface gathers the student's decision. The read-only adapter fetches provider data. The deterministic paper engine calculates and validates virtual execution. The local account ledger records the result. Morpheus explains the mechanism; it does not replace the calculation engine. The following diagram is the intended live-observation workflow. The guided scenario described in [design.md](design.md) supplies explicitly fictional inputs instead of provider observations. The earlier skeleton and reference source are not present in this repository.
 
 ```mermaid
 flowchart TD

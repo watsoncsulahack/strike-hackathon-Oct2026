@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="768" height="518" viewBox="76 56 768 518" content="&lt;mxfile host=&quot;app.diagrams.net&quot;&gt;&#10;  &lt;diagram id=&quot;drmz-er&quot; name=&quot;Conceptual ER Diagram&quot;&gt;&#10;    &lt;mxGraphModel dx=&quot;950&quot; dy=&quot;718&quot; grid=&quot;1&quot; gridSize=&quot;10&quot; guides=&quot;1&quot; tooltips=&quot;1&quot; connect=&quot;1&quot; arrows=&quot;1&quot; fold=&quot;1&quot; page=&quot;1&quot; pageScale=&quot;1&quot; pageWidth=&quot;1000&quot; pageHeight=&quot;750&quot; math=&quot;0&quot; shadow=&quot;0&quot;&gt;&#10;      &lt;root&gt;&#10;        &lt;mxCell id=&quot;0&quot; /&gt;&#10;        &lt;mxCell id=&quot;1&quot; parent=&quot;0&quot; /&gt;&#10;        &lt;mxCell id=&quot;drmz&quot; parent=&quot;1&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffffff;strokeColor=#243746;strokeWidth=2;&quot; value=&quot;DRMZ&quot; vertex=&quot;1&quot;&gt;&#10;          &lt;mxGeometry height=&quot;80&quot; width=&quot;200&quot; x=&quot;100&quot; y=&quot;80&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;agent&quot; parent=&quot;1&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffffff;strokeColor=#243746;strokeWidth=2;&quot; value=&quot;Coding Agent&quot; vertex=&quot;1&quot;&gt;&#10;          &lt;mxGeometry height=&quot;80&quot; width=&quot;200&quot; x=&quot;100&quot; y=&quot;280&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;node&quot; parent=&quot;1&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffffff;strokeColor=#243746;strokeWidth=2;&quot; value=&quot;Cardano Node&quot; vertex=&quot;1&quot;&gt;&#10;          &lt;mxGeometry height=&quot;80&quot; width=&quot;200&quot; x=&quot;600&quot; y=&quot;80&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;strike&quot; parent=&quot;1&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffffff;strokeColor=#243746;strokeWidth=2;&quot; value=&quot;Strike&quot; vertex=&quot;1&quot;&gt;&#10;          &lt;mxGeometry height=&quot;80&quot; width=&quot;200&quot; x=&quot;560&quot; y=&quot;335&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;llama&quot; parent=&quot;1&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffffff;strokeColor=#243746;strokeWidth=2;&quot; value=&quot;DefiLlama&quot; vertex=&quot;1&quot;&gt;&#10;          &lt;mxGeometry height=&quot;80&quot; width=&quot;200&quot; x=&quot;620&quot; y=&quot;470&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;e1&quot; edge=&quot;1&quot; parent=&quot;1&quot; source=&quot;drmz&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#243746;strokeWidth=2;startArrow=ERmandOne;endArrow=ERoneToMany;startSize=18;endSize=18;exitX=0.5;exitY=1;entryX=0.5;entryY=0;&quot; target=&quot;agent&quot; value=&quot;&quot;&gt;&#10;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;e2&quot; edge=&quot;1&quot; parent=&quot;1&quot; source=&quot;drmz&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#243746;strokeWidth=2;startArrow=ERmandOne;endArrow=ERoneToMany;startSize=18;endSize=18;exitX=1;exitY=0.5;entryX=0;entryY=0.5;&quot; target=&quot;node&quot; value=&quot;&quot;&gt;&#10;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;e3&quot; edge=&quot;1&quot; parent=&quot;1&quot; source=&quot;agent&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#243746;strokeWidth=2;startArrow=ERoneToMany;endArrow=ERoneToMany;startSize=18;endSize=18;entryX=0;entryY=0.5;exitX=1;exitY=0.75;exitDx=0;exitDy=0;&quot; target=&quot;strike&quot; value=&quot;&quot;&gt;&#10;          &lt;mxGeometry relative=&quot;1&quot; x=&quot;-0.0625&quot; as=&quot;geometry&quot;&gt;&#10;            &lt;mxPoint x=&quot;310&quot; y=&quot;340&quot; as=&quot;sourcePoint&quot; /&gt;&#10;          &lt;/mxGeometry&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;e4&quot; edge=&quot;1&quot; parent=&quot;1&quot; source=&quot;agent&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#243746;strokeWidth=2;startArrow=ERoneToMany;endArrow=ERoneToMany;startSize=18;endSize=18;exitX=1;exitY=0.2;entryX=0.5;entryY=1;&quot; target=&quot;node&quot; value=&quot;&quot;&gt;&#10;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#10;            &lt;Array as=&quot;points&quot;&gt;&#10;              &lt;mxPoint x=&quot;440&quot; y=&quot;296&quot; /&gt;&#10;              &lt;mxPoint x=&quot;440&quot; y=&quot;210&quot; /&gt;&#10;              &lt;mxPoint x=&quot;700&quot; y=&quot;210&quot; /&gt;&#10;            &lt;/Array&gt;&#10;          &lt;/mxGeometry&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;e5&quot; edge=&quot;1&quot; parent=&quot;1&quot; source=&quot;agent&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#243746;strokeWidth=2;startArrow=ERoneToMany;endArrow=ERoneToMany;startSize=18;endSize=18;exitX=0.5;exitY=1;&quot; target=&quot;llama&quot; value=&quot;&quot;&gt;&#10;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#10;            &lt;Array as=&quot;points&quot;&gt;&#10;              &lt;mxPoint x=&quot;200&quot; y=&quot;520&quot; /&gt;&#10;            &lt;/Array&gt;&#10;            &lt;mxPoint x=&quot;590&quot; y=&quot;500&quot; as=&quot;targetPoint&quot; /&gt;&#10;          &lt;/mxGeometry&gt;&#10;        &lt;/mxCell&gt;&#10;      &lt;/root&gt;&#10;    &lt;/mxGraphModel&gt;&#10;  &lt;/diagram&gt;&#10;&lt;/mxfile&gt;&#10;">
+  <title>DRMZ conceptual entity relationship diagram</title>
+  <desc>Preview generated from the accompanying draw.io XML, preserving its entities, positions, endpoint cardinalities, and specified connector waypoints.</desc>
+  <metadata id="drawio-xml"><![CDATA[<mxfile host="app.diagrams.net">
+  <diagram id="drmz-er" name="Conceptual ER Diagram">
+    <mxGraphModel dx="950" dy="718" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="750" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="drmz" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffffff;strokeColor=#243746;strokeWidth=2;" value="DRMZ" vertex="1">
+          <mxGeometry height="80" width="200" x="100" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="agent" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffffff;strokeColor=#243746;strokeWidth=2;" value="Coding Agent" vertex="1">
+          <mxGeometry height="80" width="200" x="100" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="node" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffffff;strokeColor=#243746;strokeWidth=2;" value="Cardano Node" vertex="1">
+          <mxGeometry height="80" width="200" x="600" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="strike" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffffff;strokeColor=#243746;strokeWidth=2;" value="Strike" vertex="1">
+          <mxGeometry height="80" width="200" x="560" y="335" as="geometry" />
+        </mxCell>
+        <mxCell id="llama" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffffff;strokeColor=#243746;strokeWidth=2;" value="DefiLlama" vertex="1">
+          <mxGeometry height="80" width="200" x="620" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="drmz" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#243746;strokeWidth=2;startArrow=ERmandOne;endArrow=ERoneToMany;startSize=18;endSize=18;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="agent" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="drmz" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#243746;strokeWidth=2;startArrow=ERmandOne;endArrow=ERoneToMany;startSize=18;endSize=18;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="node" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="agent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#243746;strokeWidth=2;startArrow=ERoneToMany;endArrow=ERoneToMany;startSize=18;endSize=18;entryX=0;entryY=0.5;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" target="strike" value="">
+          <mxGeometry relative="1" x="-0.0625" as="geometry">
+            <mxPoint x="310" y="340" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="agent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#243746;strokeWidth=2;startArrow=ERoneToMany;endArrow=ERoneToMany;startSize=18;endSize=18;exitX=1;exitY=0.2;entryX=0.5;entryY=1;" target="node" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="296" />
+              <mxPoint x="440" y="210" />
+              <mxPoint x="700" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="agent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#243746;strokeWidth=2;startArrow=ERoneToMany;endArrow=ERoneToMany;startSize=18;endSize=18;exitX=0.5;exitY=1;" target="llama" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="520" />
+            </Array>
+            <mxPoint x="590" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+]]></metadata>
+  <rect x="76.0" y="56.0" width="768.0" height="518.0" fill="#ffffff"/>
+  <g id="edges" fill="none">
+    <g id="e1" data-source="drmz" data-target="agent" data-start-arrow="ERmandOne" data-end-arrow="ERoneToMany">
+      <path d="M 200,160 L 200,280" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 210.5,170.5 L 189.5,170.5" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 210.5,181 L 189.5,181" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 189.5,259 L 210.5,259" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 210.5,280 L 200,259 L 189.5,280" stroke="#243746" stroke-width="2.0"/>
+    </g>
+    <g id="e2" data-source="drmz" data-target="node" data-start-arrow="ERmandOne" data-end-arrow="ERoneToMany">
+      <path d="M 300,120 L 600,120" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 310.5,109.5 L 310.5,130.5" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 321,109.5 L 321,130.5" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 579,130.5 L 579,109.5" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 600,109.5 L 579,120 L 600,130.5" stroke="#243746" stroke-width="2.0"/>
+    </g>
+    <g id="e3" data-source="agent" data-target="strike" data-start-arrow="ERoneToMany" data-end-arrow="ERoneToMany">
+      <path d="M 300,340 L 430,340 L 430,375 L 560,375" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 321,329.5 L 321,350.5" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 300,350.5 L 321,340 L 300,329.5" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 539,385.5 L 539,364.5" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 560,364.5 L 539,375 L 560,385.5" stroke="#243746" stroke-width="2.0"/>
+    </g>
+    <g id="e4" data-source="agent" data-target="node" data-start-arrow="ERoneToMany" data-end-arrow="ERoneToMany">
+      <path d="M 300,296 L 440,296 L 440,210 L 700,210 L 700,160" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 321,285.5 L 321,306.5" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 300,306.5 L 321,296 L 300,285.5" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 710.5,181 L 689.5,181" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 689.5,160 L 700,181 L 710.5,160" stroke="#243746" stroke-width="2.0"/>
+    </g>
+    <g id="e5" data-source="agent" data-target="llama" data-start-arrow="ERoneToMany" data-end-arrow="ERoneToMany">
+      <path d="M 200,360 L 200,520 L 620,520" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 210.5,381 L 189.5,381" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 189.5,360 L 200,381 L 210.5,360" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 599,530.5 L 599,509.5" stroke="#243746" stroke-width="2.0"/>
+      <path d="M 620,509.5 L 599,520 L 620,530.5" stroke="#243746" stroke-width="2.0"/>
+    </g>
+  </g>
+  <g id="drmz" data-entity="DRMZ">
+    <rect x="100.0" y="80.0" width="200.0" height="80.0" fill="#ffffff" stroke="#243746" stroke-width="2"/>
+    <text x="200.0" y="120.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#000000">DRMZ</text>
+  </g>
+  <g id="agent" data-entity="Coding Agent">
+    <rect x="100.0" y="280.0" width="200.0" height="80.0" fill="#ffffff" stroke="#243746" stroke-width="2"/>
+    <text x="200.0" y="320.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#000000">Coding Agent</text>
+  </g>
+  <g id="node" data-entity="Cardano Node">
+    <rect x="600.0" y="80.0" width="200.0" height="80.0" fill="#ffffff" stroke="#243746" stroke-width="2"/>
+    <text x="700.0" y="120.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#000000">Cardano Node</text>
+  </g>
+  <g id="strike" data-entity="Strike">
+    <rect x="560.0" y="335.0" width="200.0" height="80.0" fill="#ffffff" stroke="#243746" stroke-width="2"/>
+    <text x="660.0" y="375.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#000000">Strike</text>
+  </g>
+  <g id="llama" data-entity="DefiLlama">
+    <rect x="620.0" y="470.0" width="200.0" height="80.0" fill="#ffffff" stroke="#243746" stroke-width="2"/>
+    <text x="720.0" y="510.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#000000">DefiLlama</text>
+  </g>
+</svg>

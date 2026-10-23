@@ -3,13 +3,12 @@
 ## Read first
 
 1. `Product.md` — business purpose, audience, mission, problem, solution, and value.
-2. `UI.md` — feature presentation, learner interactions, navigation, and recovery.
-3. `requirements.md` — user and system requirements and acceptance criteria.
-4. `design.md` — visual design; reconcile provisional styling against DRMZ's actual website CSS.
-5. `ER.md` — the existing conceptual relationships; do not treat it as a database schema.
-6. `docs/backlog.md` — implementation tasks, priorities, status, and acceptance evidence.
-7. `docs/metrics.md` — dated ecosystem research, distinct from learner analytics.
-8. `.gemini/skills/` — reference material, not authorization to execute real-money actions. Specific instructions here govern this educational app work.
+2. `requirements.md` — user and system requirements and acceptance criteria.
+3. `design.md` — visual design, feature presentation, and learner interactions; reconcile provisional styling against DRMZ's actual website CSS.
+4. `ER.md` — the existing conceptual relationships; do not treat it as a database schema.
+5. `docs/backlog.md` — implementation tasks, priorities, status, and acceptance evidence.
+6. `docs/metrics.md` — dated ecosystem research, distinct from learner analytics.
+7. `.gemini/skills/` — reference material, not authorization to execute real-money actions. Specific instructions here govern this educational app work.
 
 ## Implementation boundaries
 

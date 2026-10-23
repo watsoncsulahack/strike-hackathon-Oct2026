@@ -2,33 +2,27 @@
 
 ## Model and source
 
-This is the conceptual relationship model from the existing draw.io diagram, reproduced in Markdown for reading alongside the product documentation. The editable source is [DRMZ-Agent-Relationships.drawio](docs/DRMZ-Agent-Relationships.drawio).
+This is the existing draw.io XML diagram, displayed below through an SVG preview generated from its node geometry, connectors, labels, and cardinality styles. The editable XML source remains [DRMZ-Agent-Relationships.drawio](docs/DRMZ-Agent-Relationships.drawio).
 
-The five entities and five connections are preserved. The source uses crow's-foot cardinality markers but leaves its relationship names blank. The generic “relates to” labels below make the Mermaid diagram readable without inventing ownership or operational contracts.
+The XML is the source of truth. Preserve its five entities, five connections, positions, and crow's-foot markers. Relationship labels remain blank, as in the original. Regenerate the preview when the XML changes.
 
 ## Diagram
 
-```mermaid
-erDiagram
-    direction TB
-    DRMZ ||--|{ CODING_AGENT : "relates to"
-    DRMZ ||--|{ CARDANO_NODE : "relates to"
-    CODING_AGENT }|--|{ STRIKE : "relates to"
-    CODING_AGENT }|--|{ CARDANO_NODE : "relates to"
-    CODING_AGENT }|--|{ DEFILLAMA : "relates to"
-```
+![DRMZ conceptual entity relationship diagram rendered from the draw.io XML](docs/DRMZ-Agent-Relationships.svg)
+
+[Open the diagram preview](docs/DRMZ-Agent-Relationships.svg) · [Open the editable draw.io XML](docs/DRMZ-Agent-Relationships.drawio)
 
 ## Entities
 
-| Diagram entity | Name in the source | Interpretation in this product's context |
-| --- | --- | --- |
-| DRMZ | DRMZ | The organization and community supplying the product purpose, educational context, and host website. |
-| CODING_AGENT | Coding Agent | Development and research tooling that uses the repository and relevant data sources. |
-| CARDANO_NODE | Cardano Node | Infrastructure for blockchain observations and research verification. |
-| STRIKE | Strike | The intended source of public market observations for the educational trading experience. |
-| DEFILLAMA | DefiLlama | An external source used for comparative protocol research and metrics. |
+| Entity in the diagram | Interpretation in this product's context |
+| --- | --- |
+| DRMZ | The organization and community supplying the product purpose, educational context, and host website. |
+| Coding Agent | Development and research tooling that uses the repository and relevant data sources. |
+| Cardano Node | Infrastructure for blockchain observations and research verification. |
+| Strike | The intended source of public market observations for the educational trading experience. |
+| DefiLlama | An external source used for comparative protocol research and metrics. |
 
-The coding agent is distinct from Morpheus, the learner-facing guide described in [UI.md](UI.md). The diagram does not make the coding agent an autonomous trading service.
+The coding agent is distinct from Morpheus, the learner-facing guide described in [Product.md](Product.md) and [design.md](design.md). The diagram does not make the coding agent an autonomous trading service.
 
 ## Relationship cardinalities
 
@@ -40,7 +34,7 @@ The coding agent is distinct from Morpheus, the learner-facing guide described i
 | Coding Agent ↔ Cardano Node | Many-to-many |
 | Coding Agent ↔ DefiLlama | Many-to-many |
 
-The source's mandatory-one and one-to-many endpoint markers are transcribed as one and one-or-more in Mermaid. These are conceptual model markings, not verified deployment counts or requirements for multiple live providers. Specific relationship verbs and operational multiplicities remain to be confirmed before using this model to constrain implementation.
+The crow's-foot markers come from the XML's endpoint styles. These are conceptual model markings, not verified deployment counts or requirements for multiple live providers. Specific relationship verbs and operational multiplicities remain to be confirmed before using this model to constrain implementation.
 
 ## Scope and implementation use
 
