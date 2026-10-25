@@ -4,8 +4,6 @@
 
 This is the existing draw.io XML diagram, displayed below through an SVG preview generated from its node geometry, connectors, labels, and cardinality styles. The editable XML source remains [DRMZ-Agent-Relationships.drawio](docs/DRMZ-Agent-Relationships.drawio).
 
-The XML is the source of truth. Preserve its five entities, five connections, positions, and crow's-foot markers. Relationship labels remain blank, as in the original. Regenerate the preview when the XML changes.
-
 ## Diagram
 
 ![DRMZ conceptual entity relationship diagram rendered from the draw.io XML](docs/DRMZ-Agent-Relationships.svg)
