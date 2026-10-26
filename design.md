@@ -8,11 +8,9 @@ description: Website-derived DRMZ visual system and component guidance for an in
 
 ## Overview
 
-Paper Hands should look like another page of DRMZ's website: bold purple headings, cream and navy surfaces, full-width color sections, large readable copy, rounded photographs, and a circular Morpheus launcher. Reuse the host site's visual language and assets within its Next.js/Vercel environment.
+Paper Hands should look like another page of [DRMZ's website](https://www.drmz.app): bold purple headings, cream and navy surfaces, full-width color sections, large readable copy, rounded photographs, and a circular Morpheus launcher. Reuse the host site's visual language and assets within its Next.js/Vercel environment.
 
-This revision uses the owner-provided `index.html`, `3e30e7e231be9211.css`, and `3cd83cfe34ca397f.css`, reviewed on 2026-10-25. The HTML connects the first stylesheet to the page's Tailwind utilities and bespoke DRMZ classes; the second stylesheet supplies Swiper. Values below come from those declarations and the classes actually present in the saved HTML. They replace the earlier logo-sampled navy/lavender/gold proposal.
-
-**Evidence boundaries:** a class appearing in a compiled bundle does not establish that the page uses it. The HTML shows a closed Morpheus launcher, but no open chat panel, form inputs, trading charts, order ticket, or theme switch. Those additions are explicitly described as adaptations below. The supplied HTML references images, JavaScript, and a Google-hosted Lobster font whose files were not supplied. Their appearance, loading, and interactive behavior have not been browser-verified.
+**Evidence boundaries:**
 
 Token names such as `colors.primary` are this document's semantic aliases for the website's literal colors; they are not claims about the site's generic CSS variable `--primary`. Normative tokens preserve source values. Supporting evidence and asset references are recorded in [docs/ASSETS.md](docs/ASSETS.md). Business purpose remains in [Product.md](Product.md); acceptance criteria and delivery status remain in [requirements.md](requirements.md) and [docs/backlog.md](docs/backlog.md).
 
@@ -253,8 +251,6 @@ rounded:
 ```
 
 ## Components
-
-### Observed website components
 
 - **Primary action:** `.purple_bg .purple_bg_hover`, white inherited text, 1.125rem type, 0.75rem vertical / 1.5rem horizontal padding, 0.5rem corners, and the large box shadow. Hover changes purple to `#6735A8`.
 - **Dark action:** same dimensions and white text on `#111D35`; hover becomes black.
