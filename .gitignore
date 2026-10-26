@@ -18,3 +18,13 @@ dist/
 .DS_Store
 *.swp
 *.swo
+
+# Next.js build output
+.next/
+out/
+build/
+*.tsbuildinfo
+next-env.d.ts.bak
+
+# Vercel
+.vercel/
