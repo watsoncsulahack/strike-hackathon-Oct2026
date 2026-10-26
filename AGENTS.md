@@ -4,7 +4,7 @@
 
 1. `Product.md` — business purpose, audience, mission, problem, solution, and value.
 2. `requirements.md` — user and system requirements and acceptance criteria.
-3. `design.md` — visual design, feature presentation, and learner interactions; reconcile provisional styling against DRMZ's actual website CSS.
+3. `design.md` — website-derived design tokens and component guidance; use the supplied CSS evidence in docs/ASSETS.md and verify unobserved runtime states.
 4. `ER.md` — the existing conceptual relationships; do not treat it as a database schema.
 5. `docs/backlog.md` — implementation tasks, priorities, status, and acceptance evidence.
 6. `docs/metrics.md` — dated ecosystem research, distinct from learner analytics.

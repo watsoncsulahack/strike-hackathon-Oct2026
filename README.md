@@ -7,7 +7,7 @@ A proposed DRMZ educational web app where beginners learn perpetuals through vir
 | Document | Purpose |
 | --- | --- |
 | [Product.md](Product.md) | Business concept, mission, problem, solution, and value proposition. |
-| [design.md](design.md) | Visual design, feature presentation, and learner interactions; actual DRMZ website CSS still needs to be sampled. |
+| [design.md](design.md) | Website-derived colors, typography, layout, shapes, and component guidance; observed styles are distinguished from app adaptations. |
 | [requirements.md](requirements.md) | User and system requirements with acceptance criteria. |
 | [ER.md](ER.md) | The existing conceptual entity relationship diagram and its editable source. |
 | [docs/backlog.md](docs/backlog.md) | Prioritized implementation work and status. |
