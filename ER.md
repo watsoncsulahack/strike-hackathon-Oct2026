@@ -2,7 +2,7 @@
 
 ## Model and source
 
-This is the existing draw.io XML diagram, displayed below through an SVG preview generated from its node geometry, connectors, labels, and cardinality styles. The editable XML source remains [DRMZ-Agent-Relationships.drawio](docs/DRMZ-Agent-Relationships.drawio).
+This is the draw.io XML ER diagram, displayed below through an SVG preview generated from its node geometry, connectors, labels, and cardinality styles. The editable XML source remains [DRMZ-Agent-Relationships.drawio](docs/DRMZ-Agent-Relationships.drawio).
 
 ## Diagram
 
@@ -20,7 +20,7 @@ This is the existing draw.io XML diagram, displayed below through an SVG preview
 | Strike | The intended source of public market observations for the educational trading experience. |
 | DefiLlama | An external source used for comparative protocol research and metrics. |
 
-The coding agent is distinct from Morpheus, the learner-facing guide described in [Product.md](Product.md) and [design.md](design.md). The diagram does not make the coding agent an autonomous trading service.
+The coding agent is generic, but the one from DRMZ is known as Morpheus, the learner-facing guide described in [Product.md](Product.md) and [design.md](design.md). The diagram does not make the coding agent an autonomous trading service.
 
 ## Relationship cardinalities
 
